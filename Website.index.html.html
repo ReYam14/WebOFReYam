@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog - About Bodybuilding</title>
+	<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+     alert("Welcome to my website!");
+
+    });
+
+   </script>
+    <style>
+        /* Define custom color variables for easier management */
+        :root {
+            --dark-blue: #000042;
+            --medium-gray: #2C2C2C;
+            --light-gray: #F5F5F5;
+            --white: #FFFFFF;
+            --highlight-color: #82EEFD;
+            --link-hover-color: #00B0FF; /* New hover color */
+        }
+        
+        /* General body styles */
+        body {
+            font-family: "Times New Roman", serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #c0c0c2; 
+            position: relative; 
+        }
+        
+        /* Styling for header */
+        header {
+            background: var(--dark-blue); 
+            color: var(--white); 
+            padding: 1rem; 
+            text-align: center; 
+        }
+        
+        /* Sticky navigation bar styles */
+        nav {
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            background: var(--medium-gray); 
+            padding: 1rem; 
+            position: sticky; 
+            top: 0; /* Pin navbar to the top */
+            z-index: 1000; 
+            flex-wrap: wrap; 
+            text-align: center; 
+        }
+        
+        /* Styling for each navbar link */
+        nav a {
+            color: var(--white); 
+            margin: 0 15px; 
+            text-decoration: none; 
+            font-size: 12px; 
+            font-family: "Arial Black", sans-serif; 
+            display: inline-block;
+            padding: 5px;
+        }
+
+        /* Hover effect for navbar links */
+        nav a:hover {
+            background-color: var(--highlight-color); /* Background color on hover */
+            border-radius: 5px; /* Rounded corners on hover */
+        }
+        
+        /* Active state for the currently active link */
+        nav a:active {
+            color: var(--dark-blue);
+            background-color: var(--highlight-color); /* Highlight active link */
+        }
+
+        /* Visited links styling */
+        nav a:visited {
+            color: White; /* A different color for visited links */
+        }
+        
+        /* Media query for screen sizes smaller than 768px */
+        @media (max-width: 768px) {
+            
+            nav a {
+                margin: 10px 0; /* Slightly adjust margin if needed */
+            }
+        }
+        
+        /* Styling for the main content area */
+        main {
+            display: flex; 
+            flex-wrap: wrap; 
+            padding: 20px; 
+        }
+        
+        /* Section styles for the primary content */
+        section {
+            flex: 2; 
+            padding: 20px; 
+            background: var(--light-gray); 
+            border-radius: 5px; 
+        }
+        
+        /* Aside section styles */
+        aside {
+            flex: 1; 
+            padding: 20px; 
+            background: var(--light-gray); 
+            border-radius: 5px; 
+            position: sticky; 
+            top: 20px;
+        }
+        
+        /* Media query for mobile screens */
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column; /* Stack main content vertically */
+            }
+            section, aside {
+                width: 100%; /* Make each element take full width on small screens */
+            }
+        }
+        
+        /* Footer styling */
+        footer {
+            background: var(--medium-gray); 
+            color: var(--white); 
+            text-align: center;
+            padding: 1rem; 
+            margin-top: 20px; 
+        }
+        
+        /* Article styling */
+        article {
+            padding-bottom: 20px; 
+            border-bottom: 4px solid black; 
+        }
+        
+        /* Floating button styling */
+        .floating-btn {
+            position: absolute; 
+            bottom: 20px; 
+            right: 20px; 
+            padding: 15px 25px; 
+            background-color: #00CCFF; 
+            color: #FFFFFF; 
+            font-size: 16px; 
+            border-radius: 50px; 
+            border: none; 
+            cursor: pointer; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+        }
+
+        /* Hover effect for the floating button */
+        .floating-btn:hover {
+            background-color: #82EEFD; 
+        }
+
+        /* Hover effect for popular topics links */
+        aside a:hover {
+            color: var(--link-hover-color); /* Change text color on hover */
+            text-decoration: underline; /* Add underline effect on hover */
+        }
+
+        /* Popup styling */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 1001;
+            width: 300px;
+        }
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            display: none;
+        }
+        .popup-close {
+            cursor: pointer;
+            color: #f00;
+            font-size: 18px;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>Exploring the Art and Science of Building Muscle</h1>
+        <p>"If you're not improving, you're falling behind"</p>
+    </header>
+    
+    <nav>
+        <a href="#">Home</a>
+        <a href="C:\Users\Rheam\OneDrive - adamson.edu.ph\Ebuen_WebDesign\HTML\About Us.html">About Us</a>
+        <a href="C:\Users\Rheam\OneDrive - adamson.edu.ph\Ebuen_WebDesign\HTML\Dashboard.html">Dashboard</a>
+        <a href="C:\Users\Rheam\OneDrive - adamson.edu.ph\Ebuen_WebDesign\HTML\Contact Us.html">Contact Us</a>
+		<a href="C:\Users\Rheam\OneDrive - adamson.edu.ph\Ebuen_WebDesign\HTML\Vid Web.html">Gallery</a>
+    </nav>
+    
+    <main>
+        <section>
+            <h2>Latest Blog Posts</h2>
+            <article>
+                <h3>Latest about the Classic Physique</h3>
+                <p>Chris Bumstead, also known as "cbum", has won the Mr. Olympia Classic Physique award six times, including in 2024.</p>
+                <a href="#">Read More</a>
+            </article>
+            <article>
+                <h3>Training Routines</h3>
+                <p>A structured workout routine is essential for muscle growth, recovery, and consistent progress. Different routines cater to different fitness goals...</p>
+                <a href="#">Read More</a>
+            </article>
+        </section>
+        
+        <aside>
+            <h2>History About Bodybuilding</h2>
+            <p>Modern bodybuilding originated in Europe in the late 19th century. Eugen Sandow, known as the "Father of Bodybuilding," organized the first contest in 1901, promoting aesthetics in fitness.</p>
+            <h3>Popular Topics</h3>
+            <ul>
+                <li><a href="https://www.hanyrambod.com/the-truth-system/">By Coach Hany Rambod, a new training program</a></li>
+                <li><a href="https://barbend.com/sam-sulek-wins-2025-arnold-amatuer-earns-ifbb-pro-card/">Sam Sulek Wins His Debut Bodybuilding Show</a></li>
+                <li><a href="https://muscleinsider.com/news/chris-bumstead-not-switching-open-bodybuilding/">Chris Bumstead switching to open bodybuilding</a></li>
+                <li><a href="https://shop.bodybuilding.com/blogs/training/arnold-schwarzeneggers-8-best-training-principles?srsltid=AfmBOopiH4ws6DrJXmzOx51224dXKoH3_8Ce8HUH6KGeSZljAr2u7Dfr">Arnold Schwarzenegger's 8 Best Training Principles</a></li>
+            </ul>
+        </aside>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 My Blog. All Rights Reserved.</p>
+    </footer>
+
+    <button class="floating-btn">Join Now!</button>
+
+    <!-- Popup and overlay -->
+    <div class="popup-overlay" id="popup-overlay"></div>
+    <div class="popup" id="popup">
+        <span class="popup-close" id="popup-close">X</
