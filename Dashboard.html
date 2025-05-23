@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Program Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #121212;
+            color: #E0E0E0;
+        }
+
+        header {
+            background-color: #1b1f3b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+            flex-wrap: wrap;
+        }
+
+        .sidebar {
+            width: 220px;
+            background-color: #2a2a2a;
+            color: #F5F5F5;
+            padding: 25px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border-right: 3px solid #1b1f3b;
+            align-items: center;
+        }
+
+        .sidebar a {
+            font-size: 20px;
+            cursor: pointer;
+            padding: 12px 0;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            color: #F5F5F5;
+            transition: 0.3s;
+            display: block;
+            width: 100%;
+        }
+
+        .sidebar a.active {
+            color: #1b1f3b;
+            font-weight: bold;
+            background-color: #444;
+        }
+
+        .sidebar a:hover {
+            background-color: #3a3a3a;
+            transform: scale(1.05);
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            flex: 1;
+            background-color: #1c1c1e;
+        }
+
+        .box {
+            background-color: #28325e;
+            border-radius: 10px;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: bold;
+            flex-direction: column;
+            text-align: center;
+            color: #FFFFFF;
+            transition: background-color 0.3s, transform 0.2s;
+            padding: 15px;
+        }
+
+        .box:hover {
+            background-color: #3a4b8f;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .sidebar {
+                width: 100%;
+                text-align: center;
+                border-right: none;
+                border-bottom: 3px solid #1b1f3b;
+            }
+            .main-content {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>♚ GYM Program Dashboard</header>
+    <div class="container">
+        <div class="sidebar">
+            <a href="C:\Users\Rheam\OneDrive - adamson.edu.ph\Ebuen_WebDesign\HTML\Website.html" class="active">Home</a>
+            <a href="#">Program</a>
+            <a href="#">Routine</a>
+            <a href="#">Macros</a>
+            <a href="#">Calorie Intake</a>
+            <a href="#">Steps</a>
+        </div>
+        <div class="main-content">
+            <div class="box">Monday<br><span>Leg/Forearm ☢</span></div>
+            <div class="box">Tuesday<br><span>Chest/Tricep ❑</span></div>
+            <div class="box">Wednesday<br><span>Back/Bicep Σ</span></div>
+            <div class="box">Thursday<br><span>Chest/Back ♠</span></div>
+            <div class="box">Friday<br><span>Sharms ☠</span></div>
+            <div class="box">Saturday<br><span>Leg/Abs ✿</span></div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle active class toggle on sidebar links
+        const sidebarLinks = document.querySelectorAll('.sidebar a');
+
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                sidebarLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

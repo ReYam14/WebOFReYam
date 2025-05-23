@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <style>
+    /* Define color variables */
+    :root {
+      --dark-blue: #000042; /* Dark Blue */
+      --gray: #808080; /* Gray */
+      --white: #FFFFFF;
+      --light-gray: #F5F5F5;
+    }
+
+    /* General body styling */
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--dark-blue);
+      color: var(--white);
+      padding: 20px;
+    }
+
+    /* Styling for the main title */
+    h2 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 30px;
+      color: var(--gray);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Styling for the gallery container */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 20px;
+      justify-items: center;
+      margin-top: 40px;
+    }
+
+    /* Styling for each gallery item */
+    .gallery-item {
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: var(--gray);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Styling for images and videos within the gallery items */
+    .gallery-item img, .gallery-item video {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    /* Specific video styling */
+    .gallery-item video {
+      max-height: 300px; /* limit height for videos */
+    }
+
+    /* Specific image styling */
+    .gallery-item img {
+      max-height: 300px; /* limit height for images */
+    }
+
+    /* Hover effect for gallery items */
+    .gallery-item:hover {
+      transform: scale(1.05); /* Slight zoom on hover */
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Styling for the videos to have a smooth transition */
+    .gallery-item video {
+      transition: transform 0.3s ease;
+    }
+    .gallery-item video:hover {
+      transform: scale(1.02);
+    }
+
+  </style>
+</head>
+<body>
+
+  <h2>Gallery</h2>
+  
+  <div class="gallery">
+    
+    <div class="gallery-item">
+      <img src="C:\Users\Rheam\OneDrive - adamson.edu.ph\Ebuen_WebDesign\IMG\Sam.jpg" alt="Photo 1">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="C:\Users\Rheam\OneDrive - adamson.edu.ph\Ebuen_WebDesign\IMG\David.jpg" alt="Photo 2">
+    </div>
+ 
+    <div class="gallery-item">
+      <img src="C:\Users\Rheam\OneDrive - adamson.edu.ph\Ebuen_WebDesign\IMG\Cbum 2.jpg" alt="Photo 3">
+    </div>
+ 
+    <div class="gallery-item">
+      <img src="C:\Users\Rheam\OneDrive - adamson.edu.ph\Ebuen_WebDesign\IMG\Tren Twins.jpg" alt="Photo 4">
+    </div>
+
+    <!-- Video with autoplay and loop -->
+    <div class="gallery-item">
+      <video src="C:\Users\Rheam\OneDrive - adamson.edu.ph\Ebuen_WebDesign\Video\video1.mp4.mp4" type="video/mp4" autoplay loop muted></video>
+    </div>
+   
+    <div class="gallery-item">
+      <video src="C:\Users\Rheam\OneDrive - adamson.edu.ph\Ebuen_WebDesign\Video\Davidlaid.mp4" type="video/mp4" autoplay loop muted></video>
+    </div>
+    
+    <div class="gallery-item">
+      <video src="C:\Users\Rheam\OneDrive - adamson.edu.ph\Ebuen_WebDesign\Video\Cbum.mp4" type="video/mp4" autoplay loop muted></video>
+    </div>
+
+    <div class="gallery-item">
+      <video src="C:\Users\Rheam\OneDrive - adamson.edu.ph\Ebuen_WebDesign\Video\Tren twin,mp4.mp4" type="video/mp4" autoplay loop muted></video>
+    </div>
+  </div>
+
+</body>
+</html>

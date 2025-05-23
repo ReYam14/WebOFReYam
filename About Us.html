@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DigitalNest</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header, footer {
+      background-color: #6a4c93; 
+      color: white;
+      padding: 1.5em;
+      text-align: center;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1em;
+    }
+
+    .logo {
+      height: 100px;
+      width: auto;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      margin-top: 1em;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffcc00; 
+    }
+
+    main {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      height: 100vh; /* Full height of the viewport */
+    }
+
+    section.products {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    article.product {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 1.5em;
+      transition: transform 0.3s;
+      border-left: 4px solid #ffcc00; 
+      width: 100%;
+      max-width: 500px;
+    }
+
+    article.product:hover {
+      transform: scale(1.05);
+    }
+
+    figure {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    figure img {
+      width: 100%;
+      max-width: 100%; /* Allow the image to be resizable */
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .buy-btn {
+      margin-top: 0.5em;
+      background-color: #ffcc00;
+      color: white;
+      border: none;
+      padding: 0.7em 1.5em;
+      cursor: pointer;
+      transition: background 0.3s;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .buy-btn:hover {
+      background-color: #e6b800; 
+    }
+
+    aside {
+      flex: 1;
+      background-color: #fff3cd;
+      padding: 2em;
+      border-left: 5px solid #ffeeba;
+      border-radius: 5px;
+      font-style: Times New Roman;
+      font-size: 1.8rem;
+      overflow-y: auto;
+    }
+
+    footer {
+      margin-top: 2em;
+      font-size: 0.9rem;
+    }
+
+    .social-links a {
+      margin: 0 0.5em;
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .social-links a:hover {
+      color: #ffcc00; 
+    }
+
+    /* For responsiveness */
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5em;
+      }
+
+      main {
+        flex-direction: column; /* Stack the content vertically */
+      }
+
+      aside {
+        margin-top: 0;
+        border-left: none;
+        border-top: 5px solid #ffeeba;
+      }
+
+      .buy-btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <img src="C:\Users\Rheam\OneDrive - adamson.edu.ph\Ebuen_WebDesign\IMG\RHEAM.jpg" alt="DigitalNest Logo" class="logo" />
+      <h1>About Us</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#contact">"Your mind is your greatest tool, and mastering it is the key to success."</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="products" id="products">
+      <article class="product">
+        <figure>
+          <img src="C:\Users\Rheam\OneDrive - adamson.edu.ph\Ebuen_WebDesign\IMG\Rheam 2.jpg" alt="Album" />
+          <figcaption>
+            <h2></h2>
+            <button class="buy-btn">RHEAM PAUL ANGELES EBUEN</button>
+          </figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <aside>
+      
+      ⭐ Hi! I’m Rheam Paul A. Ebuen, 19 years old and currently studying Bachelor of Science in Information Technology at Adamson University. I’m someone who enjoys learning new things, especially when it comes to tech, creativity, and self-improvement.
+
+I’d describe myself as flexible, creative, and assertive. I’m comfortable working with tools like Microsoft Word, PowerPoint, and Excel, and I’ve built a basic foundation in HTML, CSS, and C# through my studies. I also enjoy web design and experimenting with digital art in my free time.
+
+Besides tech, I like getting creative with video editing and working on personal projects. I’m also a gym enthusiast it’s my way of staying focused, disciplined, and energized.
+
+I’m always excited to grow, take on new challenges, and work with others who are just as passionate. Thanks for taking the time to get to know me!
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 DigitalNest. All rights reserved.</p>
+    <div class="social-links">
+      <a href="#">Facebook</a> | 
+      <a href="#">Twitter</a> | 
+      <a href="#">LinkedIn</a>
+    </div>
+  </footer>
+
+</body>
+</html>
